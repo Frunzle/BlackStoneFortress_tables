@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %} Hostile actions Input{% endblock%}
+{% block heading %} Input hostile actions{% endblock %} 
+{% block subtitle %} this page is for adding all the hostile actions to the hostile actions database {% endblock %} 
+
+
+{% block maintext %} 
+
+
+Probably also do a readout of all the actions here or something 
+<form action="{{ url_for('inputbehaviour') }}" method="POST">
+<input type="text" name="actionname" placeholder="Action name">
+<input type="text" name="description" placeholder="describe action">
+<button>submit</button>
+</form>
+
+<h3>
+    <ul class="datalist">
+        {% for action in actions %}
+            <li>{{action}}</li>
+        {% endfor %}
+    </ul>
+
+</h3>
+
+
+{% endblock %}
+

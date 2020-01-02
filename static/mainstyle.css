@@ -1,0 +1,35 @@
+html, body {
+  height: 100%; }
+
+body {
+  background-color: #272431;
+  color: #d4f3ee; }
+
+.titleblock {
+  height: 30%;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+
+.mainblock {
+  height: 50%;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+
+.footer {
+  height: 20%; }
+
+.footer > table {
+  text-align: center;
+  margin-left: 20%;
+  width: 60%;
+  border: cadetblue solid 2px; }
+
+.datalist {
+  text-align: left;
+  margin-left: 35%; }
+
+a, a:visited {
+  color: #d4f3ee;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+
+/*# sourceMappingURL=mainstyle.css.map */

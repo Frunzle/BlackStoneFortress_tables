@@ -1,0 +1,47 @@
+$textcolour:  rgb(212, 243, 238) ;
+$objectscolour: cadetblue;
+$backgroundcolour: rgb(39, 36, 49);
+
+html, body {
+height: 100%;
+}
+
+body {
+    background-color: $backgroundcolour;
+    color: $textcolour ;
+}
+
+
+.titleblock {
+    height: 30%; 
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.mainblock {
+    height:50%;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.footer {
+    height:20%;    
+}
+
+.footer > table {
+    text-align: center;
+    margin-left: 20%;
+    width: 60%;
+    border: $objectscolour solid 2px;
+}
+
+.datalist {
+    text-align: left; 
+    margin-left:35%;
+}
+
+a, a:visited {
+    color:$textcolour;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+

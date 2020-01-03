@@ -41,6 +41,17 @@ def inputbehaviour():
         db.execute("INSERT INTO hostileactions (actionname, description) VALUES (:actionname, :description)",
                      {"actionname": actionname, "description": description})
         db.commit()
-    return render_template("behaviourinput.html", actions=actions)
+    return render_template("behaviourinput.html", actions = actions)
     
+@app.route("/inputhostiles", methods=["GET" , "POST"])
+def inputhostiles():
+    hostiles = db.execute("SELECT * FROM hostiles").fetchall()
 
+    if request.method=="POST":
+        hostilename = request.form.get("hostilename")
+        hostilemove = request.form.get("hostilemove")
+        hostilewounds = request.form.get("hostilewounds")
+        hostilesize = request.form.get("hostilesize")
+        db.execute("INSERT INTO hostiles (hostilename, hostilemove, hostilewounds, hostilesize) VALUES (:hostilename, :hostilemove, :hostilewounds, :hostilesize)", {"hostilename":hostilename, "hostilemove":hostilemove, "hostilewounds":hostilewounds, "hostilesize":hostilesize})
+        db.commit()
+    return render_template("hostileinput.html", hostiles = hostiles)

@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %} Hostile actions Input{% endblock%}
+{% block heading %} Input hostile actions{% endblock %} 
+{% block subtitle %} this page is for adding all the hostile actions to the hostile actions database {% endblock %} 
+
+
+{% block maintext %} 
+
+
+Probably also do a readout of all the actions here or something 
+<form action="{{ url_for('inputhostiles') }}" method="POST">
+<input type="text" name="hostilename" placeholder="Hostile's name">
+<input type="text" name="hostilemove" placeholder="no. of moves">
+<input type="text" name="hostilewounds" placeholder="no. of wounds">
+<input type="text" name="hostilesize" placeholder="Base size">
+<button>submit</button>
+</form>
+
+    <table class="datalist">
+        <h2>
+        <tr>
+            <td>Name</td>
+            <td>Move</td>
+            <td>Wounds</td>
+            <td>Size</td>
+        </tr>
+        </h2>
+        {% for hostile in hostiles %}
+            <tr>
+                <td></td<h3>{{hostile.hostilename}}</h3></td>           
+                <td><p>{{hostile.hostilemove}}</p></td>
+                <td><p>{{hostile.hostilewounds}}</p></td>
+                <td><p>{{hostile.hostilesize}}</p></td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+
+
+{% endblock %}
+

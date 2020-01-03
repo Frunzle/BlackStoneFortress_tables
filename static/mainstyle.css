@@ -25,8 +25,17 @@ body {
   border: cadetblue solid 2px; }
 
 .datalist {
+  padding: 20px;
   text-align: left;
-  margin-left: 35%; }
+  margin-left: 20%;
+  width: 60%; }
+  .datalist td {
+    padding: 5px;
+    border: cadetblue solid 2px; }
+    .datalist td .leftcolumn {
+      width: 15%; }
+    .datalist td .rightcolumn {
+      width: 45%; }
 
 a, a:visited {
   color: #d4f3ee;

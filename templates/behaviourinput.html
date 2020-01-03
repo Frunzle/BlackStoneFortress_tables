@@ -15,14 +15,16 @@ Probably also do a readout of all the actions here or something
 <button>submit</button>
 </form>
 
-<h3>
-    <ul class="datalist">
+    <table class="datalist">
         {% for action in actions %}
-            <li>{{action}}</li>
+            <tr>
+                <td class=leftcolumn><h3>{{action.actionname}}</h3></td>           
+                <td class=rightcolumn><p>{{action.description}}</p></td>
+            </tr>
         {% endfor %}
-    </ul>
+    </table>
 
-</h3>
+
 
 
 {% endblock %}
